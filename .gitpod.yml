@@ -1,0 +1,21 @@
+# Перечислите начальные задачи.Узнать больше: https://www.gitpod.io/docs/configure/workspaces/tasks
+tasks:
+  - init: |
+      pip install copier
+      python -m pip install advent-of-code-data
+
+  - command: copier gh:gahjelle/template-aoc-python advent_of_code/
+  
+  - name: Script Task
+    init: echo 'init script' # выполняется во время предварительной сборки => https://www.gitpod.io/docs/configure/projects/prebuilds
+    command: echo 'start script'
+
+
+# Перечислите порты, которые необходимо предоставить. Узнайте больше: https://www.gitpod.io/docs/configure/workspaces/ports
+ports:
+  - name: Frontend
+    description: Port 3000 for the frontend
+    port: 3000
+    onOpen: open-preview
+
+# Узнайте больше из готовых к использованию шаблонов: https://www.gitpod.io/docs/introduction/getting-started/quickstart

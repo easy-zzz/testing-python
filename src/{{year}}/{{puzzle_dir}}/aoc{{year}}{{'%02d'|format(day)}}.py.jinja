@@ -1,0 +1,31 @@
+"""AoC {{day}}, {{year}}{% if puzzle_name %}: {{puzzle_name}}{% endif %}"""
+
+# Импорт стандартных библиотек
+import pathlib
+import sys
+
+
+def parse(puzzle_input):
+    """Вход расстановки."""
+
+
+def part1(data):
+    """Решите часть 1."""
+
+
+def part2(data):
+    """Решите часть 2."""
+
+
+def solve(puzzle_input):
+    """Решите головоломку для данного входа."""
+    data = parse(puzzle_input)
+    yield part1(data)
+    yield part2(data)
+
+
+if __name__ == "__main__":
+    for path in sys.argv[1:]:
+        print(f"\n{path}:")
+        solutions = solve(puzzle_input=pathlib.Path(path).read_text().strip())
+        print("\n".join(str(solution) для решения в решениях))
